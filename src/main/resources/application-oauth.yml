@@ -12,14 +12,14 @@ spring:
             scope:
               - profile_nickname
               - account_email
+#          google:
+#            client-id: 584138240322-usgrgu5a0956u7oa550da1aic9s6m3tm.apps.googleusercontent.com
+#            client-secret: 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
+#            # redirect-uri: "{baseUrl}/login/oauth2/code/google"
+#            scope: email, profile
         provider:
           kakao:
             authorization-uri: https://kauth.kakao.com/oauth/authorize
             token-uri: https://kauth.kakao.com/oauth/token
             user-info-uri: https://kapi.kakao.com/v2/user/me
             user-name-attribute: id
-#          google:
-#            client-id: 584138240322-usgrgu5a0956u7oa550da1aic9s6m3tm.apps.googleusercontent.com
-#            client-secret: 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
-#            # redirect-uri: "{baseUrl}/login/oauth2/code/google"
-#            scope: email, profile
