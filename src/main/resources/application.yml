@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://127.0.0.1:13306/spring_social?useSSL=false&serverTimezone=Asia/Seoul
+    username: root
+    password: password
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MariaDB103Dialect
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+  profiles:
+    active: oauth
+
+jwt:
+  secret: F52D3FF3586173985E6ECDCED1DF9
+
+#app:
+#  auth:
+#    tokenSecret: F52D3FF3586173985E6ECDCED1DF9
+#    tokenExpirationMsec: 864000000
+#  cors:
+#    allowedOrigins: http://localhost:3000
+#  oauth2:
+#    authorizedRedirectUris:
+#      - http://localhost:3000/oauth2/redirect
