@@ -17,7 +17,13 @@ spring:
     active: oauth
 
 jwt:
-  secret: F52D3FF3586173985E6ECDCED1DF9
+  secretKey: F52D3FF3586173985E6ECDCED1DF9
+  access:
+    expiration: 3600000
+    header: Authorization
+  refresh:
+    expiration: 1209600000
+    header: Authorization-refresh
 
 #app:
 #  auth:
