@@ -1,15 +1,15 @@
 package com.jun.studywithus.member.model;
 
-import lombok.AccessLevel;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.*;
 
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
+@Builder
 @Entity
 public class Member {
 
@@ -47,15 +47,25 @@ public class Member {
         this.refreshToken = refreshToken;
     }
 
-    @Builder(builderMethodName = "commonSignUp")
-    public Member(String email, String password, String nickname, int age, String city, Role role){
-        this.email = email;
-        this.password = password;
-        this.nickname = nickname;
-        this.age = age;
-        this.city = city;
-        this.role = role;
-    }
+//    @Builder(builderMethodName = "commonSignUp")
+//    public Member(String email, String password, String nickname, int age, String city, Role role){
+//        this.email = email;
+//        this.password = password;
+//        this.nickname = nickname;
+//        this.age = age;
+//        this.city = city;
+//        this.role = role;
+//    }
+//
+//    @Builder(builderMethodName = "socialSignUp")
+//    public Member(SocialType socialType, String socialId, String email, String nickname, String imageUrl, Role role){
+//        this.socialType = socialType;
+//        this.socialId = socialId;
+//        this.email = email;
+//        this.nickname = nickname;
+//        this.imageUrl = imageUrl;
+//        this.role = role;
+//    }
 
 
 

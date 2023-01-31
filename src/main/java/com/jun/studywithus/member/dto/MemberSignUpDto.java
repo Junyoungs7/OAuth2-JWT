@@ -18,7 +18,6 @@ public class MemberSignUpDto {
     @NotBlank
     private String nickname;
 
-    @NotBlank
     private int age;
 
     @NotBlank
